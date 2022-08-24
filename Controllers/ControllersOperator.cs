@@ -23,13 +23,13 @@ public class ControllerController : ControllerBase
     }
 
     [HttpGet("GetOrderById")]
-    public Car GetOrderById(int id)
+    public Operator GetOrderById(int id)
     {
-        return _operatorService.GetOperatorById(id);
+        return _operatorService.GetOpertorById(id);
     }
 
     [HttpPost("Add")]
-    public void Add([FromBody] Car newCar)
+    public void Add([FromBody] Operator newOperator)
     {
         _operatorService.AddOperator(newOperator);
     }

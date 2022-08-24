@@ -16,33 +16,36 @@ public class OperatorServices
     public void Default()
     {
         Operator newOperator = new Operator();
-        newOperator.Mail = "BRAWL@mail.ru";
+        newOperator.Mail = "Ashot228@mail.ru";
         newOperator.Name = "Ashot";
         newOperator.Post = "GOD";
 
+        Operator newOperator1 = new Operator();
+        newOperator1.Mail = "Stepan110@mail.ru";
+        newOperator1.Name = "Stepan";
+        newOperator1.Post = "Chiter";
+
+        Operator newOperator2 = new Operator();
+        newOperator2.Mail = "IlonMasckSpase@mail.ru";
+        newOperator2.Name = "Ilon";
+        newOperator2.Post = "MILIARDER";
+
         _context.Operators.Add(newOperator);
+        _context.Operators.Add(newOperator1);
+        _context.Operators.Add(newOperator2);
         _context.SaveChanges();
     }
-    public Operator GetCarById(int id)
+    public Operator GetOpertorById(int id)
     {
         return _context.Operators.Where(x => x.Id == id).FirstOrDefault();
     }
 
-    internal Car GetOperatorById(int id)
-    {
-        throw new NotImplementedException();
-    }
-
+    
     public void AddOperator(Operator newOperator)
     {
 
         _context.Operators.Add(newOperator);
         _context.SaveChanges();
-    }
-
-    internal void AddOperator(object newOperator)
-    {
-        throw new NotImplementedException();
     }
 
     public List<Operator> GetOperators()

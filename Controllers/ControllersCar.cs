@@ -18,7 +18,7 @@ public class CarController : ControllerBase
     public List<Car> GetAll()
     {
 
-         return _carService.Getcars();
+         return _carService.GetCars();
     }
   
     [HttpGet("GetCarById")]

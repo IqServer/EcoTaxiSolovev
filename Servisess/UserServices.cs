@@ -20,10 +20,22 @@ public class UserServices
     public void Default()
     {
         User newUser = new User();
-        newUser.Address = "Mamino 67";
+        newUser.Address = "Opera 67";
         newUser.Name = "Mark";
         newUser.Surname = "Petrov";
-        newUser.PhoneNumber = +8959872243f;
+        newUser.PhoneNumber = +798097277766;
+
+        User newUser1 = new User();
+        newUser.Address = "Opera 7";
+        newUser.Name = "Gena";
+        newUser.Surname = "Petrov";
+        newUser.PhoneNumber = +89439089980;
+
+        User newUser2 = new User();
+        newUser.Address = "Opera 6";
+        newUser.Name = "Dima";
+        newUser.Surname = "Petrov";
+        newUser.PhoneNumber = +79509727755;
     }
 
     public User GetUserById(int id)
@@ -38,6 +50,6 @@ public class UserServices
     }
     public List<User> GetUser()
     {
-          return _context.Users.ToList();
+        return _context.Users.ToList();
     }
 }
