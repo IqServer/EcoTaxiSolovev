@@ -6,7 +6,7 @@ namespace ControllersPoint;
 
 [ApiController]
 [Route("api/[controller]/[action]")]
-public class PointController : ControllerBase 
+public class PointController : ControllerBase
 {
     PointServices _pointService;
     public PointController(PointServices pointService)
@@ -18,9 +18,9 @@ public class PointController : ControllerBase
     public List<Point> GetAll()
     {
 
-         return _pointService.GetPoints();
+        return _pointService.GetPoints();
     }
-  
+
     [HttpGet("GetPointById")]
     public Point GetPointById(int id)
     {
@@ -34,10 +34,16 @@ public class PointController : ControllerBase
     }
 
     [HttpGet("Default")]
-    public  void Default(int id)
+    public void Default(int id)
     {
-     _pointService.Default();
+        _pointService.Default();
 
     }
 
+    [HttpGet("RemovePoints")]
+    public void RemovePoints(int id)
+    {
+        _pointService.RemovePoints(id);
+
+    }
 }

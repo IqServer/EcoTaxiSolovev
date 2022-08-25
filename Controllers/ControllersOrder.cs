@@ -39,4 +39,11 @@ public class OrderController : ControllerBase
 
     }
 
+    [HttpGet("RemoveOrders")]
+    public void RemoveOrders(int id)
+    {
+        _orderService.RemoveOrders(id);
+
+    }
+
 }

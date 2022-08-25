@@ -10,8 +10,6 @@ public class OperatorServices
     public OperatorServices(DataContext context)
     {
         _context = context;
-
-
     }
     public void Default()
     {
@@ -28,14 +26,16 @@ public class OperatorServices
         return _context.Operators.Where(x => x.Id == id).FirstOrDefault();
     }
 
+<<<<<<< Updated upstream
     internal Car GetOperatorById(int id)
     {
         throw new NotImplementedException();
     }
 
+=======
+>>>>>>> Stashed changes
     public void AddOperator(Operator newOperator)
     {
-
         _context.Operators.Add(newOperator);
         _context.SaveChanges();
     }
@@ -48,6 +48,13 @@ public class OperatorServices
     public List<Operator> GetOperators()
     {
         return _context.Operators.ToList();
+    }
+       
+    public void RemoveOperator(int id)
+    {
+        Operator? Operator = _context.Operators.FirstOrDefault(x => x.Id == id);
+        _context.Operators.Remove(Operator);
+        _context.SaveChanges();
     }
 
 }

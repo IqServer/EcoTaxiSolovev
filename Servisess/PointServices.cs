@@ -39,4 +39,13 @@ public class PointServices
     {
         return _context.Points.ToList();
     }
+    public void RemovePoints(int id)
+    {
+        Point? Point = _context.Points.FirstOrDefault(x => x.Id == id);
+        _context.Points.Remove(Point);
+        _context.SaveChanges();
+    }
+
+
+
 }

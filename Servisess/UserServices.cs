@@ -40,4 +40,11 @@ public class UserServices
     {
           return _context.Users.ToList();
     }
+
+    public void RemoveUser(int id)
+    {
+        User? User = _context.Users.FirstOrDefault(x => x.Id == id);
+        _context.Users.Remove(User);
+        _context.SaveChanges();
+    }
 }

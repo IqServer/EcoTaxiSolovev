@@ -18,7 +18,19 @@ public class CarServices
         Car newCar = new Car();
         newCar.Free = false;
         newCar.NumberCar = "E123EC";
+<<<<<<< Updated upstream
        
+=======
+
+        Car newCar1 = new Car();
+        newCar1.Free = false;
+        newCar1.NumberCar = "E133EC";
+
+        Car newCar2 = new Car();
+        newCar2.Free = false;
+        newCar2.NumberCar = "E223EC";
+
+>>>>>>> Stashed changes
         _context.Cars.Add(newCar);
         _context.SaveChanges();
     }
@@ -28,6 +40,7 @@ public class CarServices
         throw new NotImplementedException();
     }
 
+<<<<<<< Updated upstream
     internal List<Car> GetOperators()
     {
         throw new NotImplementedException();
@@ -37,6 +50,9 @@ public class CarServices
     {
         throw new NotImplementedException();
     }
+=======
+
+>>>>>>> Stashed changes
 
     public Car GetCarById(int id)
     {
@@ -54,5 +70,12 @@ public class CarServices
     public List<Car> GetCars()
     {
         return _context.Cars.ToList();
+    }
+
+    public void RemoveCar(int id)
+    {
+        Car? Car = _context.Cars.FirstOrDefault(x => x.Id == id);
+        _context.Cars.Remove(Car);
+        _context.SaveChanges();
     }
 }
