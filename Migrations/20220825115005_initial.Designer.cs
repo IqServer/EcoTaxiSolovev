@@ -13,8 +13,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Freebob.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220825051548_initial7")]
-    partial class initial7
+    [Migration("20220825115005_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -107,8 +107,8 @@ namespace Freebob.Migrations
                     b.Property<string>("status")
                         .HasColumnType("text");
 
-                    b.Property<DateTime>("time")
-                        .HasColumnType("timestamp with time zone");
+                    b.Property<string>("time")
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
@@ -144,8 +144,8 @@ namespace Freebob.Migrations
                     b.Property<string>("Title")
                         .HasColumnType("text");
 
-                    b.Property<DateTime?>("time")
-                        .HasColumnType("timestamp with time zone");
+                    b.Property<string>("time")
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 

@@ -105,8 +105,8 @@ namespace Freebob.Migrations
                     b.Property<string>("status")
                         .HasColumnType("text");
 
-                    b.Property<DateTime>("time")
-                        .HasColumnType("timestamp with time zone");
+                    b.Property<string>("time")
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
@@ -142,8 +142,8 @@ namespace Freebob.Migrations
                     b.Property<string>("Title")
                         .HasColumnType("text");
 
-                    b.Property<DateTime?>("time")
-                        .HasColumnType("timestamp with time zone");
+                    b.Property<string>("time")
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 

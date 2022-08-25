@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -7,7 +6,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Freebob.Migrations
 {
-    public partial class initial7 : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -22,7 +21,7 @@ namespace Freebob.Migrations
                     Fio = table.Column<string>(type: "text", nullable: true),
                     mass = table.Column<float>(type: "real", nullable: false),
                     product = table.Column<string>(type: "text", nullable: true),
-                    time = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    time = table.Column<string>(type: "text", nullable: true),
                     status = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
@@ -80,7 +79,7 @@ namespace Freebob.Migrations
                     Address = table.Column<string>(type: "text", nullable: true),
                     RequestId = table.Column<int>(type: "integer", nullable: true),
                     PhoneNumber = table.Column<float>(type: "real", nullable: true),
-                    time = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    time = table.Column<string>(type: "text", nullable: true),
                     Fractions = table.Column<List<string>>(type: "text[]", nullable: true)
                 },
                 constraints: table =>

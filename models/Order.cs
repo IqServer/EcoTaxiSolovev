@@ -8,7 +8,7 @@ public class Order
     public string? Fio { get; set; }
     public float mass { get; set; }
     public string? product { get; set; }
-    public DateTime time { get; set; }
+    public string? time { get; set; }
     public string? status { get; set; }
     
 
