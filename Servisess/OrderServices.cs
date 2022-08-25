@@ -17,22 +17,21 @@ public class OrderServices
     {
         Order newOrder = new Order();
         newOrder.Operator = "Gena";
-        newOrder.Request = "";
-        newOrder.Time = (new TimeOnly(23, 15));
+        // newOrder.Request = "";
+        // newOrder.Time = (new TimeOnly(23, 15));
         newOrder.Address = "Mamino 67";
 
         Order newOrder1 = new Order();
-        newOrder.Operator = "Artur";
-        newOrder.Request = "";
-        newOrder.Time = (new TimeOnly(23, 23));
-        newOrder.Address = "Mamino 6";
+        newOrder1.Operator = "Artur";
+        // newOrder1.Request = "";
+        // newOrder1.Time = (new TimeOnly(23, 23));
+        newOrder1.Address = "Mamino 6";
 
         Order newOrder2 = new Order();
-        newOrder.Operator = "Dima";
-        newOrder.Request = "";
-        newOrder.Time = (new TimeOnly(23, 09));
-        newOrder.Address = "Mamino 7";
-
+        newOrder2.Operator = "Dima";
+        // newOrder2.Request = "";
+        // newOrder2.Time = (new TimeOnly(23, 09));
+        newOrder2.Address = "Mamino 7";
 
 
         _context.Orders.Add(newOrder);

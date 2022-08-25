@@ -9,4 +9,8 @@ public class Point
     public string? Address { get; set; }
     public Request? Request { get; set; }
     public int? RequestId { get; set; }
+    public float? PhoneNumber { get; set; }
+    public DateTime? time { get; set; }
+
+    public List<string>? Fractions {get;set;}
 }

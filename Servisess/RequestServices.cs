@@ -23,20 +23,20 @@ public class RequestServices
         newRequest.weight = 23.09f;
 
         Request newRequest1 = new Request();
-        newRequest.Address = "Mamino 6";
-        newRequest.Lat = 23.0023989f;
-        newRequest.Lot = 98.9389278f;
-        newRequest.Prod = "galss";
-        newRequest.User = "Sasha";
-        newRequest.weight = 23.09f;
+        newRequest1.Address = "Mamino 6";
+        newRequest1.Lat = 23.0023989f;
+        newRequest1.Lot = 98.9389278f;
+        newRequest1.Prod = "galss";
+        newRequest1.User = "Sasha";
+        newRequest1.weight = 23.09f;
 
         Request newRequest2 = new Request();
-        newRequest.Address = "Mamino 7";
-        newRequest.Lat = 23.0023989f;
-        newRequest.Lot = 98.9389278f;
-        newRequest.Prod = "Paper";
-        newRequest.User = "Oleg";
-        newRequest.weight = 23.09f;
+        newRequest2.Address = "Mamino 7";
+        newRequest2.Lat = 23.0023989f;
+        newRequest2.Lot = 98.9389278f;
+        newRequest2.Prod = "Paper";
+        newRequest2.User = "Oleg";
+        newRequest2.weight = 23.09f;
 
          _context.Requests.Add(newRequest);
         _context.Requests.Add(newRequest1);

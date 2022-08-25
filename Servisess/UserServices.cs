@@ -26,16 +26,22 @@ public class UserServices
         newUser.PhoneNumber = +798097277766;
 
         User newUser1 = new User();
-        newUser.Address = "Opera 7";
-        newUser.Name = "Gena";
-        newUser.Surname = "Petrov";
-        newUser.PhoneNumber = +89439089980;
+        newUser1.Address = "Opera 7";
+        newUser1.Name = "Gena";
+        newUser1.Surname = "Petrov";
+        newUser1.PhoneNumber = +89439089980;
 
         User newUser2 = new User();
-        newUser.Address = "Opera 6";
-        newUser.Name = "Dima";
-        newUser.Surname = "Petrov";
-        newUser.PhoneNumber = +79509727755;
+        newUser2.Address = "Opera 6";
+        newUser2.Name = "Dima";
+        newUser2.Surname = "Petrov";
+        newUser2.PhoneNumber = +79509727755;
+
+        _context.Users.Add(newUser);
+        _context.Users.Add(newUser1);
+        _context.Users.Add(newUser2);
+
+        _context.SaveChanges();
     }
 
     public User GetUserById(int id)

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -6,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Freebob.Migrations
 {
-    public partial class initial9 : Migration
+    public partial class initial7 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -17,9 +18,12 @@ namespace Freebob.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Operator = table.Column<string>(type: "text", nullable: true),
-                    Time = table.Column<TimeOnly>(type: "time without time zone", nullable: true),
-                    Request = table.Column<string>(type: "text", nullable: true),
-                    Address = table.Column<string>(type: "text", nullable: true)
+                    Address = table.Column<string>(type: "text", nullable: true),
+                    Fio = table.Column<string>(type: "text", nullable: true),
+                    mass = table.Column<float>(type: "real", nullable: false),
+                    product = table.Column<string>(type: "text", nullable: true),
+                    time = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    status = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -74,7 +78,10 @@ namespace Freebob.Migrations
                     Lon = table.Column<float>(type: "real", nullable: true),
                     Title = table.Column<string>(type: "text", nullable: true),
                     Address = table.Column<string>(type: "text", nullable: true),
-                    RequestId = table.Column<int>(type: "integer", nullable: true)
+                    RequestId = table.Column<int>(type: "integer", nullable: true),
+                    PhoneNumber = table.Column<float>(type: "real", nullable: true),
+                    time = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    Fractions = table.Column<List<string>>(type: "text[]", nullable: true)
                 },
                 constraints: table =>
                 {

@@ -23,16 +23,16 @@ public class PointServices
         newPoint.Address = "Mamino 67";
 
         Point newPoint1 = new Point();
-        newPoint.Lat = 23.3829834287f;
-        newPoint.Lon = 41.2138712392f;
-        newPoint.Title = "recycling center";
-        newPoint.Address = "Mamino 6";
+        newPoint1.Lat = 23.3829834287f;
+        newPoint1.Lon = 41.2138712392f;
+        newPoint1.Title = "recycling center";
+        newPoint1.Address = "Mamino 6";
 
         Point newPoint2 = new Point();
-        newPoint.Lat = 98.2122143434f;
-        newPoint.Lon = 43.2138712392f;
-        newPoint.Title = "recycling center";
-        newPoint.Address = "Mamino 7";
+        newPoint2.Lat = 98.2122143434f;
+        newPoint2.Lon = 43.2138712392f;
+        newPoint2.Title = "recycling center";
+        newPoint2.Address = "Mamino 7";
 
 
         _context.Points.Add(newPoint);
