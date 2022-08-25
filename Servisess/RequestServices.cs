@@ -38,7 +38,7 @@ public class RequestServices
         newRequest2.User = "Oleg";
         newRequest2.weight = 23.09f;
 
-         _context.Requests.Add(newRequest);
+        _context.Requests.Add(newRequest);
         _context.Requests.Add(newRequest1);
         _context.Requests.Add(newRequest2);
         _context.SaveChanges();
@@ -56,4 +56,11 @@ public class RequestServices
     {
         return _context.Requests.ToList();
     }
+    public void RemoveRequest(int id)
+    {
+        Request? Request = _context.Requests.FirstOrDefault(x => x.Id == id);
+        _context.Requests.Remove(Request);
+        _context.SaveChanges();
+    }
+
 }

@@ -8,7 +8,7 @@ namespace ControllersUser;
 [Route("api/[controller]/[action]")]
 public class UserController : ControllerBase
 {
-   UserServices _userService;
+    UserServices _userService;
     public UserController(UserServices userService)
     {
         _userService = userService;
@@ -18,9 +18,9 @@ public class UserController : ControllerBase
     public List<User> GetAll()
     {
 
-         return _userService.GetUser();
+        return _userService.GetUser();
     }
-  
+
     [HttpGet("GetCarById")]
     public User GetCarById(int id)
     {
@@ -34,9 +34,15 @@ public class UserController : ControllerBase
     }
 
     [HttpGet("Default")]
-    public  void Default(int id)
+    public void Default(int id)
     {
-     _userService.Default();
+        _userService.Default();
+
+    }
+    [HttpGet("RemoveUser")]
+    public void RemoveUsers(int id)
+    {
+        _userService.RemoveUser(id);
 
     }
 

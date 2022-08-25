@@ -39,8 +39,17 @@ public class CarController : ControllerBase
      _carService.Default();
 
     }
+    
+    [HttpGet("RemoveCars")]
+    public void RemoveOperators(int id)
+    {
+        _carService.RemoveCar(id);
+
+    }
 
 }
+
+
 
 
 

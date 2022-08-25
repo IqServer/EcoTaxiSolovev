@@ -52,5 +52,11 @@ public class OrderServices
     {
         return _context.Orders.ToList();
     }
+    public void RemoveOrders(int id)
+    {
+        Order? Orders = _context.Orders.FirstOrDefault(x => x.Id == id);
+        _context.Orders.Remove(Orders);
+        _context.SaveChanges();
+    }
 
 }

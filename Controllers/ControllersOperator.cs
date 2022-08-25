@@ -41,4 +41,11 @@ public class ControllerController : ControllerBase
 
     }
 
+    [HttpGet("RemoveOperators")]
+    public void RemoveOperators(int id)
+    {
+        _operatorService.RemoveOperator(id);
+
+    }
+
 }

@@ -19,14 +19,14 @@ public class CarServices
         newCar.Free = false;
         newCar.NumberCar = "E123EC";
 
-         Car newCar1 = new Car();
+        Car newCar1 = new Car();
         newCar1.Free = false;
         newCar1.NumberCar = "E133EC";
 
-         Car newCar2 = new Car();
+        Car newCar2 = new Car();
         newCar2.Free = false;
         newCar2.NumberCar = "E223EC";
-       
+
         _context.Cars.Add(newCar);
         _context.Cars.Add(newCar1);
         _context.Cars.Add(newCar2);
@@ -34,7 +34,7 @@ public class CarServices
     }
 
 
-    
+
 
     public Car GetCarById(int id)
     {
@@ -52,5 +52,12 @@ public class CarServices
     public List<Car> GetCars()
     {
         return _context.Cars.ToList();
+    }
+
+    public void RemoveCar(int id)
+    {
+        Car? Car = _context.Cars.FirstOrDefault(x => x.Id == id);
+        _context.Cars.Remove(Car);
+        _context.SaveChanges();
     }
 }

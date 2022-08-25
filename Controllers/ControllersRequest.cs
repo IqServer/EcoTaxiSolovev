@@ -9,7 +9,7 @@ namespace ControllersRequest;
 public class RequestController : ControllerBase
 {
     RequestServices _requestService;
-    public RequestController(RequestServices requestService) 
+    public RequestController(RequestServices requestService)
     {
         _requestService = requestService;
     }
@@ -18,9 +18,9 @@ public class RequestController : ControllerBase
     public List<Request> GetAll()
     {
 
-         return _requestService.GetRequest();
+        return _requestService.GetRequest();
     }
-  
+
     [HttpGet("GetRequestById")]
     public Request GetRequestById(int id)
     {
@@ -34,9 +34,15 @@ public class RequestController : ControllerBase
     }
 
     [HttpGet("Default")]
-    public  void Default(int id)
+    public void Default(int id)
     {
-     _requestService.Default();
+        _requestService.Default();
+
+    }
+    [HttpGet("RemoveRequests")]
+    public void RemoveRequests(int id)
+    {
+        _requestService.RemoveRequest(id);
 
     }
 

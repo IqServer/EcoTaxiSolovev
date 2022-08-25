@@ -10,7 +10,7 @@ public class Point
     public Request? Request { get; set; }
     public int? RequestId { get; set; }
     public float? PhoneNumber { get; set; }
-    public DateTime? time { get; set; }
+    public string? time { get; set; }
 
     public List<string>? Fractions {get;set;}
 }
